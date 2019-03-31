@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'd3-angular';
+  title = 'Stock Price Change Vs Google Trend';
 }
