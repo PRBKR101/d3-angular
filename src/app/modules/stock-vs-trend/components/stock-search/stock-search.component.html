@@ -1,3 +1,12 @@
-<p>
-  stock-search works!
-</p>
+<form class="stock-search-form" [formGroup]='stockSearchForm'>
+  <mat-form-field class="full-width">
+    <input type="text" placeholder="Search Ticker" aria-label="Number" matInput formCo [matAutocomplete]="auto"
+      formControlName="tickerInput">
+    <mat-autocomplete #auto="matAutocomplete" panelWidth="45%">
+      <mat-option *ngIf="isLoading" class="is-loading">loading...</mat-option>
+      <mat-option *ngFor="let ticker of tickerOptions" [value]="ticker['1. symbol']">
+        {{ticker['2. name']}} - {{ticker['1. symbol']}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
