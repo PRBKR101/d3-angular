@@ -13,7 +13,7 @@ export class StockTickerService {
 
   /* Alpha vantage gives free api key to get full access  */
   symbolSearch(tickerSymbol): Observable<any> {
-    return this.http.get<any>('https://www.alphavantage.co/query?function=SYMBOL_SEARCH&apikey=5G67QCPB1F8CRENI&keywords='+tickerSymbol);
+    return this.http.get<any>('https://www.alphavantage.co/query?function=SYMBOL_SEARCH&apikey=5G67QCPB1F8CRENI&keywords=' + tickerSymbol);
   }
 
   getTickersOneYearHistory(selectedTicker): Observable<Stock> {
