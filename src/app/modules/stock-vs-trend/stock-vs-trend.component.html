@@ -1,2 +1,10 @@
-<app-stock-search></app-stock-search>
-<app-linear-plot-graph></app-linear-plot-graph>
+<div class="stock-vs-trend-container">
+    <app-stock-search (selectedTicker)=onSearch($event)></app-stock-search>
+</div>
+<div *ngIf="googleTrend$ | async as googleTrend">
+    <app-linear-plot-graph
+        *ngIf="tickerOneYearHistory$ | async as tickerOneYearHistory"
+        [stockPriceHistory]="tickerOneYearHistory"
+        [googleTrend]="googleTrend">
+    </app-linear-plot-graph>
+</div>

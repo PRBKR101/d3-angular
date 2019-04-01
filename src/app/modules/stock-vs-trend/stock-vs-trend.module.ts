@@ -5,7 +5,7 @@ import { StockSearchComponent } from './components/stock-search/stock-search.com
 import { LinearPlotGraphComponent } from './components/linear-plot-graph/linear-plot-graph.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatAutocompleteModule,  MatFormFieldModule, MatInputModule } from '@angular/material/';
+import { MatButtonModule, MatAutocompleteModule,  MatFormFieldModule, MatInputModule } from '@angular/material/';
 import { StockTickerService } from 'src/app/shared/services/stock-ticker.service';
 
 @NgModule({
@@ -13,6 +13,7 @@ import { StockTickerService } from 'src/app/shared/services/stock-ticker.service
   imports: [
     CommonModule,
     FormsModule,
+    MatButtonModule,
     MatInputModule,
     ReactiveFormsModule,
     MatFormFieldModule,
